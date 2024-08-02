@@ -37,7 +37,7 @@ export const hero: HeroItem[] = [
 interface HeroCard {
     id: string;
     title: string;
-    icon: React.ComponentType;
+    icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
 export const heroCards: HeroCard[] = [

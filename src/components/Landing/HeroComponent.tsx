@@ -11,22 +11,23 @@ import Circle_big from '../../../public/images/hero/circle_big.png'
 import Circle_group from '../../../public/images/hero/circle_group.png'
 import { AiFillSound } from "react-icons/ai";
 import Typewriter from 'typewriter-effect';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+// import Slider from "react-slick";
 
 
 const HeroComponent: React.FC = () => {
 
     const [isSoundEnabled, setIsSoundEnabled] = useState(false);
     const [isClient, setIsClient] = useState(false);
-    const textRef = useRef(null);
+     // Define the ref with the correct type
+     const textRef = useRef<HTMLDivElement>(null);
 
-    const startAnimation = () => {
-        if (textRef.current) {
-            textRef.current.classList.add('typing-text');
-        }
-    };
+     const startAnimation = () => {
+         if (textRef.current) {
+             textRef.current.classList.add('typing-text');
+         }
+     };
 
     useEffect(() => {
         startAnimation(); // Start animation on initial render
@@ -164,7 +165,7 @@ const HeroComponent: React.FC = () => {
                 ))}
             </div>
             {/* sm to xl */}
-            <div className='mt-10 hero_card sm:block md:block lg:block xl:block 2xl:hidden hidden'>
+            {/* <div className='mt-10 hero_card sm:block md:block lg:block xl:block 2xl:hidden hidden'>
                 <Slider {...settings}>
                     {heroCards.map((item) => (
                         <div key={item.id} className="p-2">
@@ -180,7 +181,7 @@ const HeroComponent: React.FC = () => {
 
                     ))}
                 </Slider>
-            </div>
+            </div> */}
             <div className='hero_video mt-20'>
                 <p className='font-inter text-customblack font-bold hero_video_title'>Watch The Video Below to Learn More About Cashflow Innovator.</p>
                 <div className='hero_bg_img mt-10 relative'>

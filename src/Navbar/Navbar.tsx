@@ -10,7 +10,7 @@ import { IoMdCloseCircle } from "react-icons/io";
 
 const Navbar: React.FC = () => {
 
-    const [isOpen, setIsOpen] = useState(false);
+    // const [isOpen, setIsOpen] = useState(false);
     const buttonRef = useRef(null);
 
     useEffect(() => {
@@ -51,8 +51,8 @@ const Navbar: React.FC = () => {
                             Start Free Trial
                         </button>
                     </div>
-                    <button className='sm:block md:block lg:block xl:hidden 2xl:hidden hidden px-2 py-2 rounded' onClick={() => setIsOpen(true)}><IoReorderThree className='text-3xl' />
-                    </button>
+                    {/* <button className='sm:block md:block lg:block xl:hidden 2xl:hidden hidden px-2 py-2 rounded' onClick={() => setIsOpen(true)}><IoReorderThree className='text-3xl' />
+                    </button> */}
                 </div>
             </nav >
         </>
