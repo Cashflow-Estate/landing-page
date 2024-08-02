@@ -1,0 +1,41 @@
+.footer_body {
+    padding-top: 3.938rem;
+    padding-left: 3.938rem;
+    padding-right: 7.313rem;
+    padding-bottom: 1.938rem;
+}
+
+.footer_btn {
+    width: 2.5rem;
+    height: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.inner-icon {
+    width: 1.25rem;
+    height: 0.875rem;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.inner-icon1 {
+    width: 1.25rem;
+    height: 0.875rem;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.footer_desp{
+    font-size: 0.813rem;
+    line-height: 1.138rem;
+}

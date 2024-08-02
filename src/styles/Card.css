@@ -1,0 +1,33 @@
+.card_portion{
+    padding-left: 8.188rem;
+    padding-right: 8.188rem;
+}
+
+.card_img{
+    background-image: url("/images/card/card.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card_body{
+    border-radius: 20px;
+}
+
+.card_btn{
+    border-radius: 10px;
+}
+
+.custom-list-item {
+    position: relative;
+    padding-left: 1.2em;
+}
+
+.custom-list-item::before {
+    content: '•'; 
+    position: absolute;
+    left: 0;
+    color: #2F9CEF; 
+    font-size: 1.7em; 
+    line-height: 1; 
+}
