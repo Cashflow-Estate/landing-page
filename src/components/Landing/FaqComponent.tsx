@@ -1,10 +1,12 @@
 "use client"; // Add this line at the very top
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../../styles/Faq.css'
 import Link from 'next/link';
 import Image from 'next/image';
 import { faq } from "@/data/faq/faq"
 import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowDown } from "react-icons/md";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const FaqComponent: React.FC = () => {
 
@@ -14,13 +16,20 @@ const FaqComponent: React.FC = () => {
         setOpenId(openId === id ? null : id);
     };
 
+    useEffect(() => {
+        AOS.init({
+            offset: 300,
+            duration: 1000,
+        });
+    }, []); // Run this effect only once when the component mounts
+
     return (
         <>
             <div className='faq_body'>
-                <p className='font-inter text-customblack font-bold	font-title text-center'>Frequently Asked Questions</p>
+                <p className='font-inter text-customblack font-bold	font-title text-center' data-aos="fade-up">Frequently Asked Questions</p>
                 <div className='faqs_margin flex flex-col gap-7'>
                     {faq.map((item) => (
-                        <div key={item.id} className='faqs_desp bg-white'>
+                        <div key={item.id} className='faqs_desp bg-white' data-aos="fade-up">
                             <div className='flex justify-between items-center'>
                                 <p className='font-dmSans text-customblack font-bold faqs_head'>{item.title}</p>
                                 <div className={`faq_circle ${openId === item.id ? 'bg-customblack' : 'bg-white'}`} onClick={() => handleToggle(item.id)}>

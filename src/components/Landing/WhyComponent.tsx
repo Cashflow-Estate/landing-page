@@ -7,13 +7,16 @@ import { TiTick } from "react-icons/ti";
 import { IoCloseSharp } from "react-icons/io5";
 import Circle_bg from '../../../public/images/why/circle_big.png'
 import Circle_small from '../../../public/images/why/circle_small.png'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const WhyComponent: React.FC = () => {
 
-    const sectionRefs = useRef([]);
+    // Typing the useRef to hold an array of HTMLDivElement elements
+    const sectionRefs = useRef<HTMLDivElement[]>([]);
 
     // Function to add section refs
-    const addToSectionRefs = (el) => {
+    const addToSectionRefs = (el: HTMLDivElement) => {
         if (el && !sectionRefs.current.includes(el)) {
             sectionRefs.current.push(el);
         }
@@ -21,7 +24,7 @@ const WhyComponent: React.FC = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            sectionRefs.current.forEach((section, index) => {
+            sectionRefs.current.forEach((section) => {
                 const sectionRect = section.getBoundingClientRect();
                 const isVisible = sectionRect.top < window.innerHeight && sectionRect.bottom > 0;
 
@@ -39,6 +42,13 @@ const WhyComponent: React.FC = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    useEffect(() => {
+        AOS.init({
+            offset: 300,
+            duration: 1000,
+        });
+    }, []); // Run this effect only once when the component mounts
+
 
 
     return (
@@ -49,7 +59,7 @@ const WhyComponent: React.FC = () => {
                     <Image src={Circle_small} alt='' style={{ position: "absolute", left: "5rem", top: "6rem" }} />
                     <Image src={Circle_bg} alt='' style={{ position: "absolute", right: "8rem", top: "20rem" }} />
                     <Image src={Circle_small} alt='' style={{ position: "absolute", right: "5.9rem", top: "22.5rem" }} />
-                    <p className='font-inter why_title font-bold text-center'>Why <span className='text-customorange'>Choose</span> Cashflow Innovator ?</p>
+                    <p className='font-inter why_title font-bold text-center' data-aos="fade-up">Why <span className='text-customorange'>Choose</span> Cashflow Innovator ?</p>
                     <div ref={addToSectionRefs} className={`flex gap-1 justify-center items-center stairs-animation`}
                         style={{ marginTop: "3.125rem" }}>
                         <div className='why_table_title bg-customblue text-white font-inter text-2xl font-bold'>

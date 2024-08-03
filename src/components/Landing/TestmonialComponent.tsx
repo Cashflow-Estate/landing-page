@@ -1,5 +1,5 @@
 "use client"; // Add this line at the very top
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../../styles/Test.css'
 import Link from 'next/link';
 import Image from 'next/image';
@@ -14,9 +14,18 @@ import Circle from '../../../public/images/testmonial/circle.png'
 import Signature from '../../../public/images/testmonial/signature.png'
 import Star from '../../../public/images/testmonial/star.png'
 import { ImQuotesLeft, ImQuotesRight } from "react-icons/im";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const TestmonialComponent: React.FC = () => {
+
+    useEffect(() => {
+        AOS.init({
+            offset: 300,
+            duration: 1000,
+        });
+    }, []); // Run this effect only once when the component mounts
 
     return (
         <>
@@ -38,7 +47,7 @@ const TestmonialComponent: React.FC = () => {
                         <Image src={Group_one} alt='test' className="rotating-image" style={{ position: "absolute", right: "11rem", top: "21rem" }} />
                         <Image src={Group} alt='test' className="rotating-image" style={{ position: "absolute", right: "0rem", top: "21rem" }} />
                     </div>
-                    <div className='flex justify-center absolute top-0 left-0 w-full testmonial_box' >
+                    <div className='flex justify-center absolute top-0 left-0 w-full testmonial_box' data-aos="fade-up">
                         <div className='test_box relative'>
                             <div className='test_quotes'>
                                 <div className='bg-customblack test_circle'>

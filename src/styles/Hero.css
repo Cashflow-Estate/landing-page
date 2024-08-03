@@ -3,7 +3,7 @@
 }
 
 .hero_des {
-    font-size: 6rem;
+    font-size: 6.5rem;
     line-height: 99.24px;
 }
 
@@ -11,9 +11,13 @@
     display: none;
 }
 
+.text-shadow{
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
 .hero_card {
-    padding-left: 4.375rem;
-    padding-right: 4.375rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 
 .heros_btn {
@@ -56,13 +60,13 @@
 }
 
 .hero_video {
-    padding-left: 8.188rem;
-    padding-right: 8.188rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
     padding-bottom: 3.75rem;
 }
 
 .hero_video_title {
-    font-size: 2.75rem;
+    font-size: 2.90rem;
 }
 
 .hero-list-item {

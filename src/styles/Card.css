@@ -1,13 +1,18 @@
 .card_portion{
-    padding-left: 8.188rem;
-    padding-right: 8.188rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
 }
 
 .card_img{
-    background-image: url("/images/card/card.png");
+    background-image: url("/images/card/card1.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.card_title{
+    font-size: 3.125rem;
+    line-height: 3.125rem;
 }
 
 .card_body{

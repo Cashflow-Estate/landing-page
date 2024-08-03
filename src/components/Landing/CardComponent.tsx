@@ -1,9 +1,11 @@
 "use client"; // Add this line at the very top
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../../styles/Card.css'
 import Link from 'next/link';
 import Image from 'next/image';
 import { card } from "@/data/card/card"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 type IsMonthlyState = { [key: string]: boolean };
 
@@ -20,15 +22,22 @@ const CardComponent: React.FC = () => {
         setIsMonthly(prevState => ({ ...prevState, [id]: !prevState[id] }));
     };
 
+    useEffect(() => {
+        AOS.init({
+            offset: 300,
+            duration: 1000,
+        });
+    }, []); // Run this effect only once when the component mounts
+
     return (
         <>
             <div className='card_img card_portion pt-10 pb-16'>
-                <div className='font-inter text-3xl font-extrabold text-center'>
+                <div className='font-inter card_title font-extrabold text-white text-center' data-aos="fade-up">
                     Become a Cashflow Innovator Now
                 </div>
-                <div className="grid grid-cols-3 gap-7 mt-12 relative">
+                <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-7 mt-12 relative">
                     {card.map((item) => (
-                        <div key={item.id} className="bg-white pt-10 px-5 pb-8 card_body relative">
+                        <div key={item.id} className="bg-white pt-10 px-5 pb-8 card_body relative" data-aos="fade-up">
                             {item.tie && (
                                 <div className='flex justify-center'>
                                     <div className='font-inter font-base text-white bg-customorange pl-8 pr-6 py-2.5 w-40 absolute' style={{ borderRadius: "40px", top: "-20px" }}>

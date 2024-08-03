@@ -1,7 +1,7 @@
 .what_body {
     padding-top: 3.125rem;
-    padding-left: 6.188rem;
-    padding-right: 6.188rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     padding-bottom: 2.5rem;
 }
 
@@ -34,6 +34,11 @@
 .what_pad {
     padding-left: 16rem;
     padding-right: 15rem;
+}
+
+.what_pad1 {
+    padding-left: 16rem;
+    padding-right: 17rem;
 }
 
 .what_sub_box {
@@ -94,7 +99,14 @@
 
 .lefts_arrow{
     position: absolute;
-    left: 35rem;
+    left: 36rem;
+    top: -4rem;
+    width: 240px;
+}
+
+.lefts_arrow1{
+    position: absolute;
+    left: 38rem;
     top: -4rem;
     width: 240px;
 }
@@ -112,8 +124,8 @@
 .rights_arrow{
     position: absolute;
     left: 38rem;
-    top: -4.4rem;
-    width: 130px;
+    top: -3.4rem;
+    width: 185px;
 }
 
 .group_one{

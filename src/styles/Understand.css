@@ -1,31 +1,50 @@
 .understand_body {
     padding-top: 2.813rem;
-    padding-left: 8.188rem;
-    padding-right: 8.188rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     padding-bottom: 3.5rem;
 }
 
 .under_body {
     border-radius: 0px 0px 20px 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform: translateY(100%);
+    opacity: 0;
 }
 
-.under_margin {
-    margin-top: 23.5rem;
+.default_div {
+    transition: opacity 0.5s ease;
 }
 
-.under_margin1 {
-    margin-top: 0rem;
+.understand_img {
+    background-size: cover;
+    background-position: center;
+    height: 370px; 
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Ensure that children don't overflow */
+}
+
+.understand_img:hover .default_div {
+    opacity: 0;
+}
+
+.understand_img:hover .under_body {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .desp_body {
-    padding-top: 4rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-bottom: 4.7rem;
+    padding-top: 1.813rem;
+    padding-right: 2rem;
+    padding-bottom: 0.938rem;
 }
 
 .understand_title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     line-height: 2rem;
 }
 

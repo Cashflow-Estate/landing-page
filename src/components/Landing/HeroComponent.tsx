@@ -11,23 +11,25 @@ import Circle_big from '../../../public/images/hero/circle_big.png'
 import Circle_group from '../../../public/images/hero/circle_group.png'
 import { AiFillSound } from "react-icons/ai";
 import Typewriter from 'typewriter-effect';
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-// import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 
 const HeroComponent: React.FC = () => {
 
     const [isSoundEnabled, setIsSoundEnabled] = useState(false);
     const [isClient, setIsClient] = useState(false);
-     // Define the ref with the correct type
-     const textRef = useRef<HTMLDivElement>(null);
+    // Define the ref with the correct type
+    const textRef = useRef<HTMLDivElement>(null);
 
-     const startAnimation = () => {
-         if (textRef.current) {
-             textRef.current.classList.add('typing-text');
-         }
-     };
+    const startAnimation = () => {
+        if (textRef.current) {
+            textRef.current.classList.add('typing-text');
+        }
+    };
 
     useEffect(() => {
         startAnimation(); // Start animation on initial render
@@ -42,7 +44,15 @@ const HeroComponent: React.FC = () => {
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
+
     }, []);
+
+    useEffect(() => {
+        AOS.init({
+            offset: 300,
+            duration: 1000,
+        });
+    }, []); // Run this effect only once when the component mounts
 
     const handleToggleSound = () => {
         setIsSoundEnabled(!isSoundEnabled);
@@ -98,61 +108,37 @@ const HeroComponent: React.FC = () => {
 
     return (
         <>
-            {hero.map((item) => {
-                const [part1, part2] = item.title.split('AI-Based Platform');
-                return (
-                    <div key={item.id} className='hero_body px-16 sm:px-6 md:px-10 pt-14 relative'>
-                        <p className='font-caveat text-4xl font-bold text-customblack text-center sm:text-lg md:text-lg lg:text-xl xl:text-3xl 2xl:text-3xl'>{item.tie}</p>
-                        <div className='mt-2.5 flex justify-center'>
-                            <p className='font-inter font-black text-customblack text-center hero_des'>
-                                {part1}
-                                {isClient && (
-                                    <span className='text-customorange' style={{ display: 'inline-block' }}>
-                                        <Typewriter
-                                            options={{
-                                                strings: ['AI-Based Platform'],
-                                                autoStart: true,
-                                                loop: false,
-                                                deleteSpeed: Infinity,
-                                            }}
-                                            onInit={(typewriter) => {
-                                                typewriter
-                                                    .typeString('AI-Based Platform')
-                                                    .callFunction(() => {
-                                                        console.log('String typed out!');
-                                                    })
-                                                    .start();
-                                            }}
-                                        />
-                                    </span>
-                                )}
-                                {part2}
+            {hero.map((item) => (
+                <div key={item.id} className='hero_body px-12 sm:px-6 md:px-10 pt-14 relative'>
+                    <p className='font-caveat text-4xl font-bold text-customblack text-center sm:text-lg md:text-lg lg:text-xl xl:text-3xl 2xl:text-3xl'>{item.tie}</p>
+                    <div className='mt-2.5 flex justify-center'>
+                        <p className='font-inter font-black text-customblack text-center hero_des'>
+                            The #1 <span className='text-customorange text-shadow'>AI-Based Platform</span> For Your Slow Flip Properties.
+                        </p>
+                    </div>
+                    <div className='mt-6 flex justify-center'>
+                        <div className='desp_width'>
+                            <p className='font-inter text-4xl font-medium text-center sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl'>
+                                {item.description}
                             </p>
                         </div>
-                        <div className='mt-6 flex justify-center'>
-                            <div className='desp_width'>
-                                <p className='font-inter text-4xl font-medium text-center sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl'>
-                                    {item.description}
-                                </p>
-                            </div>
-                        </div>
-                        <div className='flex justify-center mt-7'>
-                            <button className='pt-7 pb-8 sm:pb-6 bg-customblue text-white font-inter text-xl sm:text-sm md:text-base font-extrabold flex items-center gap-3 rounded-md hover:bg-customorange heros_btn'>
-                                {item.tag}
-                                <Image src={item.img} alt="" width={13} height={8} priority />
-                            </button>
-                        </div>
-                        <div className='flex justify-center gap-1 items-center mt-5'>
-                            <p className='text-center font-inter font-base text-customblack font-semibold'>{item.dep}</p>
-                            <p className='text-center hero-list-item font-inter font-base text-customblack font-semibold'>{item.delivery}</p>
-                        </div>
                     </div>
-                );
-            })}
+                    <div className='flex justify-center mt-7'>
+                        <button className='pt-7 pb-8 sm:pb-6 bg-customblue text-white font-inter text-xl sm:text-sm md:text-base font-extrabold flex items-center gap-3 rounded-md hover:bg-customorange heros_btn'>
+                            {item.tag}
+                            <Image src={item.img} alt="" width={13} height={8} priority />
+                        </button>
+                    </div>
+                    <div className='flex justify-center gap-1 items-center mt-5'>
+                        <p className='text-center font-inter font-base text-customblack font-semibold'>{item.dep}</p>
+                        <p className='text-center hero-list-item font-inter font-base text-customblack font-semibold'>{item.delivery}</p>
+                    </div>
+                </div>
+            ))}
 
             <div className="grid grid-cols-6 gap-5 mt-10 hero_card sm:hidden md:hidden lg:hidden xl:hidden">
                 {heroCards.map((item) => (
-                    <div key={item.id} className='bg-custombrown pt-3.5 px-8 2xl:px-4 pb-7 flex flex-col gap-3 2xl:gap-3 justify-center items-center rounded-3xl hero_btn hover:bg-customblue group'>
+                    <div key={item.id} className='bg-custombrown pt-3.5 px-8 2xl:px-4 pb-7 flex flex-col gap-3 2xl:gap-3 justify-center items-center rounded-3xl hero_btn hover:bg-customblue group' data-aos="fade-up">
                         <div className='2xl:h-12'>
                             <item.icon className='text-5xl text-customblue group-hover:text-white' />
                         </div>
@@ -165,10 +151,10 @@ const HeroComponent: React.FC = () => {
                 ))}
             </div>
             {/* sm to xl */}
-            {/* <div className='mt-10 hero_card sm:block md:block lg:block xl:block 2xl:hidden hidden'>
+            <div className='mt-10 hero_card sm:block md:block lg:block xl:block 2xl:hidden hidden' >
                 <Slider {...settings}>
                     {heroCards.map((item) => (
-                        <div key={item.id} className="p-2">
+                        <div key={item.id} className="p-2" data-aos="fade-up">
                             <div className='bg-custombrown pt-3.5 px-8 sm:px-3.5 md:px-3.5 pb-7 flex flex-col gap-3 2xl:gap-3 justify-center items-center rounded-3xl hero_btn hover:bg-customblue text-customblack hover:text-white'>
                                 <item.icon className='text-5xl text-customblue group-hover:text-white' />
                                 <div className='md:h-16 lg:h-16'>
@@ -181,10 +167,10 @@ const HeroComponent: React.FC = () => {
 
                     ))}
                 </Slider>
-            </div> */}
+            </div>
             <div className='hero_video mt-20'>
-                <p className='font-inter text-customblack font-bold hero_video_title'>Watch The Video Below to Learn More About Cashflow Innovator.</p>
-                <div className='hero_bg_img mt-10 relative'>
+                <p className='font-inter text-customblack font-bold hero_video_title' data-aos="fade-up">Watch The Video Below to Learn More About Cashflow Innovator.</p>
+                <div className='hero_bg_img mt-10 relative' data-aos="fade-up">
                     <div className='flex gap-2 items-center pt-96 pl-10 z-10'>
                         {!isSoundEnabled ? (
                             <Image

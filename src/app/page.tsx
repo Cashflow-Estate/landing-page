@@ -1,3 +1,5 @@
+"use client";
+import { useRef } from 'react';
 import Navbar from '@/Navbar/Navbar';
 import HeroComponent from '@/components/Landing/HeroComponent';
 import WhatComponent from '@/components/Landing/WhatComponent';
@@ -10,17 +12,28 @@ import FaqComponent from '@/components/Landing/FaqComponent';
 import Footer from '@/Footer/Footer';
 
 export default function Home() {
+
+  const faqRef = useRef<HTMLDivElement>(null);
+  const priceRef = useRef<HTMLDivElement>(null);
+  const whatRef = useRef<HTMLDivElement>(null);
+
   return (
     <>
-      <Navbar />
+      <Navbar faqRef={faqRef} priceRef={priceRef} whatRef={whatRef} />
       <HeroComponent />
-      <WhatComponent />
+      <div ref={whatRef}>
+        <WhatComponent />
+      </div>
       <WhyComponent />
       <UltimateComponent />
       <TestmonialComponent />
-      <CardComponent />
+      <div ref={priceRef}>
+        <CardComponent />
+      </div>
       <UnderstandComponent />
-      <FaqComponent />
+      <div ref={faqRef}>
+        <FaqComponent />
+      </div>
       <Footer />
     </>
   );
