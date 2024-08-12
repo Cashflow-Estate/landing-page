@@ -11,12 +11,18 @@ import 'aos/dist/aos.css';
 
 const UnderstandComponent: React.FC = () => {
 
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+    const [hasRendered, setHasRendered] = useState(false);
+
     useEffect(() => {
+        // Initialize AOS once when the component mounts
         AOS.init({
             offset: 300,
             duration: 1000,
+            once: true,
+            disable: 'mobile', // Optional: Disable on mobile if needed
         });
-    }, []); // Run this effect only once when the component mounts
+    }, []);
 
     return (
         <>
@@ -24,30 +30,35 @@ const UnderstandComponent: React.FC = () => {
                 <p className='font-inter text-center text-customblack font-bold understand_title' data-aos="fade-up">
                     Understanding The <span className='text-customorange'>Key</span> Components
                 </p>
-                <div className="grid grid-cols-3 gap-6 mt-10">
-                    {understand.map(item => (
-                        <div key={item.id} className='flex flex-col rounded-lg overflow-hidden' data-aos="fade-up">
+                <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6 mt-10" data-aos="fade-up">
+                    {understand.map((item, index) => (
+                        <div key={item.id} className='flex flex-col rounded-lg'
+                            onMouseEnter={() => setHoveredIndex(index)}
+                            onMouseLeave={() => setHoveredIndex(null)}>
                             <div className='understand_img relative' style={{ backgroundImage: `url(${item.img})` }}>
-                                <div className="bg-customblue pt-5 pb-5 pl-9 pr-3.5 flex justify-between items-center absolute bottom-0 w-full default_div" style={{ borderRadius: "0px 0px 20px 20px;" }}>
-                                    <p className='font-inter font-semibold text-xl text-white'>{item.title}</p>
-                                    <div className='understand_circle'>
-                                        <IoIosArrowUp className='text-base text-customblue arrow-up' />
-                                    </div>
-                                </div>
-                                <div className="bg-customblue pt-5 pb-5 pl-9 pr-3.5 under_body">
+                                <div className="bg-customblue pt-8 pb-8 pl-9 pr-3.5 under_body">
                                     <div className='flex justify-between items-center'>
-                                        <p className='font-inter font-semibold text-xl text-white'>{item.title}</p>
+                                        <p className='font-inter font-semibold text-xl lg:text-lg xl:text-base text-white'>
+                                            {item.title}
+                                        </p>
                                         <div className='understand_circle'>
-                                            <IoIosArrowDown className='text-base text-customblue' />
+                                            {hoveredIndex === index ?
+                                                <IoIosArrowDown className='text-base text-white' /> :
+                                                <IoIosArrowUp className='text-base text-white' />
+                                            }
                                         </div>
                                     </div>
-                                    <p className='bg-customblue desp_body font-inter text-base font-medium text-white'>{item.desp}</p>
+                                    <p className={`bg-customblue desp_body font-inter text-base sm:text-sm md:text-sm lg:text-sm xl:text-sm font-medium text-white ${hoveredIndex === index ? 'blocks' : 'hiddens'}`}>
+                                        {item.desp}
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
+
+
         </>
     )
 }

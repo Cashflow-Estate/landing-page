@@ -15,6 +15,22 @@
     border-radius: 20px;
 }
 
+.left_img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 45rem;
+}
+
+.right_img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    width: 46rem;
+}
+
 .what_title {
     font-size: 3.125rem;
     line-height: 3.125rem;
@@ -22,26 +38,59 @@
     z-index: 1;
 }
 
-.what_desp_width{
-    width: 72rem;
+.what_desp_width {
+    width: 90rem;
 }
 
 .what_desp {
-    font-size: 2rem;
+    font-size: 2.3rem;
     line-height: 2.118rem;
 }
 
 .what_pad {
-    padding-left: 16rem;
-    padding-right: 15rem;
+    padding-left: 17rem;
+    padding-right: 14rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .what_pad1 {
-    padding-left: 16rem;
-    padding-right: 17rem;
+    padding-left: 17rem;
+    padding-right: 15rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .what_sub_box {
+    padding-top: 2.438rem;
+    padding-bottom: 2.438rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0px 5px 15px 0px #00000059;
+}
+.what_sub_box_1 {
+    padding-top: 2.438rem;
+    padding-bottom: 2.438rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0px 5px 15px 0px #00000059;
+}
+.what_sub_box_2 {
+    padding-top: 2.438rem;
+    padding-bottom: 2.438rem;
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0px 5px 15px 0px #00000059;
+}
+.what_sub_box_3 {
     padding-top: 2.438rem;
     padding-bottom: 2.438rem;
     padding-left: 3.5rem;
@@ -61,15 +110,45 @@
     box-shadow: 0px 5px 15px 0px #00000059;
 }
 
-.what_no{
+.what_sub_box2 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.813rem;
+    padding-right: 0.813rem;
+    border-radius: 6px;
+    background: white;
+    box-shadow: 0px 5px 15px 0px #00000059;
+}
+
+.what_sub_box3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.813rem;
+    padding-right: 0.813rem;
+    border-radius: 6px;
+    background: white;
+    box-shadow: 0px 5px 15px 0px #00000059;
+}
+
+.what_sub_box4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.813rem;
+    padding-right: 0.813rem;
+    border-radius: 6px;
+    background: white;
+    box-shadow: 0px 5px 15px 0px #00000059;
+}
+
+.what_no {
     font-size: 5rem;
     line-height: 6.051rem;
     position: absolute;
     top: -4.2rem;
-    right: 32.8rem;
+    right: 30.8rem;
 }
 
-.what_no1{
+.what_no1 {
     font-size: 5rem;
     line-height: 6.051rem;
     position: absolute;
@@ -77,34 +156,34 @@
     left: 33.2rem;
 }
 
-.what_no2{
+.what_no2 {
     font-size: 5rem;
     line-height: 6.051rem;
     position: absolute;
-    top: -3.2rem;
-    right: 31.8rem;
+    top: -3rem;
+    right: 29.8rem;
 }
 
-.what_no3{
+.what_no3 {
     font-size: 5rem;
     line-height: 6.051rem;
     position: absolute;
-    top: -1.9rem;
+    top: -1.7rem;
     left: 33.5rem;
 }
 
-.whats_pad{
+.whats_pad {
     padding-left: 22rem;
 }
 
-.lefts_arrow{
+.lefts_arrow {
     position: absolute;
-    left: 36rem;
+    left: 37rem;
     top: -4rem;
     width: 240px;
 }
 
-.lefts_arrow1{
+.lefts_arrow1 {
     position: absolute;
     left: 38rem;
     top: -4rem;
@@ -121,22 +200,24 @@
     clip-path: polygon(100% 0px, 100% 100%, 0px 100%, 0px 0px);
 }
 
-.rights_arrow{
+.rights_arrow {
     position: absolute;
     left: 38rem;
     top: -3.4rem;
     width: 185px;
 }
 
-.group_one{
-    padding-right: 14rem;
+.group_one {
+    padding-right: 16rem;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.last_width{
+.last_width {
     width: 21rem;
 }
 
-.what_btn{
+.what_btn {
     padding-top: 2.063rem;
     padding-bottom: 2.063rem;
     padding-left: 1.875rem;
@@ -160,39 +241,146 @@
     }
 }
 
-.groups_img{
+.groups_img {
     position: absolute;
     right: 0rem;
     top: 2rem;
     z-index: 1;
 }
 
+.what_btn_margin {
+    margin-top: 4.5rem;
+}
+
+.fouth_section {
+    padding-left: 16rem;
+}
+
 /* media query */
 
 @media (min-width: 1600px) and (max-width: 1630px) {
-   
+    .what_desp_width {
+        width: 85rem;
+    }
+
+    .what_desp {
+        font-size: 2.2rem;
+        line-height: 2.118rem;
+    }
 }
 
 @media (min-width: 1500px) and (max-width: 1600px) {
+    .what_desp_width {
+        width: 80rem;
+    }
+    .fouth_section {
+        padding-left: 14rem;
+    }
+    .left_img {
+        width: 40rem;
+    }
+    .what_desp {
+        font-size: 2.1rem;
+        line-height: 2.118rem;
+    }
     .what_pad {
         padding-left: 12rem;
         padding-right: 11rem;
     }
+    .what_pad1 {
+        padding-left: 12rem;
+        padding-right: 12rem;
+    }
+
     .what_no {
         position: absolute;
         top: -4.2rem;
-        right: 28.8rem;
+        right: 27.8rem;
     }
     .lefts_arrow {
         position: absolute;
-        left: 30rem;
+        left: 32rem;
+        top: -4rem;
+        width: 240px;
+    }
+    .lefts_arrow1 {
+        position: absolute;
+        left: 33rem;
         top: -4rem;
         width: 240px;
     }
     .what_no1 {
         position: absolute;
         top: 13.5rem;
-        left: 29.2rem;
+        left: 28.2rem;
+    }
+    .group_one {
+        padding-right: 14rem;
+    }
+    .what_no2 {
+        position: absolute;
+        top: -3rem;
+        right: 26.8rem;
+    }
+    .rights_arrow {
+        position: absolute;
+        left: 32rem;
+    }
+    .what_no3 {
+        position: absolute;
+        top: -1.7rem;
+        left: 28.5rem;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1500px) {
+    .what_desp_width {
+        width: 73rem;
+    }
+    .left_img {
+        width: 38rem;
+    }
+
+    .fouth_section {
+        padding-left: 10rem;
+    }
+
+    .what_desp {
+        font-size: 1.9rem;
+        line-height: 2.118rem;
+    }
+    .what_pad {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+    .what_pad1 {
+        padding-left: 10rem;
+        padding-right: 11rem;
+    }
+    .whats_pad {
+        padding-left: 16rem;
+    }
+    .what_no {
+        position: absolute;
+        top: -4.2rem;
+        right: 27.8rem;
+    }
+    .lefts_arrow {
+        position: absolute;
+        left: 27rem;
+        top: -4rem;
+        width: 240px;
+    }
+    .lefts_arrow1 {
+        position: absolute;
+        left: 29rem;
+        top: -4rem;
+        width: 240px;
+    }
+    .what_no1 {
+        position: absolute;
+        top: 13.5rem;
+        left: 27.2rem;
     }
     .group_one {
         padding-right: 11rem;
@@ -200,7 +388,7 @@
     .what_no2 {
         position: absolute;
         top: -3.2rem;
-        right: 27.8rem;
+        right: 26.8rem;
     }
     .rights_arrow {
         position: absolute;
@@ -209,28 +397,51 @@
     .what_no3 {
         position: absolute;
         top: -1.9rem;
-        left: 29.5rem;
+        left: 26.5rem;
     }
 }
 
-@media (min-width: 1400px) and (max-width: 1500px) {
+/* xxl */
+
+@media (min-width: 1300px) and (max-width: 1400px) {
+    .what_desp_width {
+        width: 65rem;
+    }
+    .left_img {
+        width: 37rem;
+    }
+
+    .fouth_section {
+        padding-left: 8rem;
+    }
+
     .what_desp {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
         line-height: 2.118rem;
     }
     .what_pad {
         padding-left: 8rem;
+        padding-right: 6rem;
+    }
+    .what_pad1 {
+        padding-left: 8rem;
         padding-right: 7rem;
-    }   
+    }
     .whats_pad {
-        padding-left: 16rem;
+        padding-left: 14rem;
     }
     .what_no {
         position: absolute;
-        top: -4.2rem;
-        right: 24.8rem;
+        top: -4rem;
+        right: 23.5rem;
     }
     .lefts_arrow {
+        position: absolute;
+        left: 24rem;
+        top: -4rem;
+        width: 240px;
+    }
+    .lefts_arrow1 {
         position: absolute;
         left: 27rem;
         top: -4rem;
@@ -239,65 +450,15 @@
     .what_no1 {
         position: absolute;
         top: 13.5rem;
-        left: 25.2rem;
+        left: 24.5rem;
     }
     .group_one {
-        padding-right: 11rem;
+        padding-right: 10rem;
     }
     .what_no2 {
         position: absolute;
-        top: -3.2rem;
-        right: 23.8rem;
-    }
-    .rights_arrow {
-        position: absolute;
-        left: 32rem;
-    }
-    .what_no3 {
-        position: absolute;
-        top: -1.9rem;
-        left: 25.5rem;
-    }
-}
-
-/* xxl */
-
-@media (min-width: 1300px) and (max-width: 1400px) {
-    .what_desp {
-        font-size: 1.7rem;
-        line-height: 2.118rem;
-        text-align: center;
-    }
-    .what_pad {
-        padding-left: 5rem;
-        padding-right: 4rem;
-    }   
-    .whats_pad {
-        padding-left: 11rem;
-    }
-    .what_no {
-        position: absolute;
-        top: -4.2rem;
-        right: 21.5rem;
-    }
-    .lefts_arrow {
-        position: absolute;
-        left: 24rem;
-        top: -4rem;
-        width: 240px;
-    }
-    .what_no1 {
-        position: absolute;
-        top: 13.5rem;
-        left: 22.5rem;
-    }
-    .group_one {
-        padding-right: 3.5rem;
-    }
-    .what_no2 {
-        position: absolute;
-        top: -3.2rem;
-        right: 20.8rem;
+        top: -3rem;
+        right: 22.8rem;
     }
     .rights_arrow {
         position: absolute;
@@ -306,31 +467,51 @@
     .what_no3 {
         position: absolute;
         top: -1.9rem;
-        left: 22.5rem;
+        left: 24.5rem;
     }
 }
 
 @media (min-width: 1200px) and (max-width: 1300px) {
+    .what_desp_width {
+        width: 65rem;
+    }
+    .left_img {
+        width: 33rem;
+    }
+
+    .fouth_section {
+        padding-left: 4rem;
+    }
+
     .what_desp {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
         line-height: 2.118rem;
-        text-align: center;
     }
     .what_pad {
-        padding-left: 3rem;
-        padding-right: 2rem;
-    }   
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+    .what_pad1 {
+        padding-left: 4rem;
+        padding-right: 5rem;
+    }
     .whats_pad {
         padding-left: 11rem;
     }
     .what_no {
         position: absolute;
-        top: -4.2rem;
-        right: 19.5rem;
+        top: -4rem;
+        right: 21.5rem;
     }
     .lefts_arrow {
         position: absolute;
         left: 20rem;
+        top: -4rem;
+        width: 240px;
+    }
+    .lefts_arrow1 {
+        position: absolute;
+        left: 23rem;
         top: -4rem;
         width: 240px;
     }
@@ -340,12 +521,12 @@
         left: 20.5rem;
     }
     .group_one {
-        padding-right: 2rem;
+        padding-right: 5rem;
     }
     .what_no2 {
         position: absolute;
-        top: -3.2rem;
-        right: 18.8rem;
+        top: -3rem;
+        right: 20.8rem;
     }
     .rights_arrow {
         position: absolute;
@@ -361,21 +542,35 @@
 /* xxl */
 
 @media (min-width: 1100px) and (max-width: 1200px) {
+    .what_desp_width {
+        width: 55rem;
+    }
+    .left_img {
+        width: 31rem;
+    }
+
+    .fouth_section {
+        padding-left: 1rem;
+    }
+
     .what_desp {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         line-height: 2.118rem;
-        text-align: center;
     }
     .what_pad {
-        padding-left: 0rem;
-        padding-right: 0rem;
-    }   
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .what_pad1 {
+        padding-left: 1rem;
+        padding-right: 2rem;
+    }
     .whats_pad {
         padding-left: 8rem;
     }
     .what_no {
         position: absolute;
-        top: -4.2rem;
+        top: -4rem;
         right: 17.5rem;
     }
     .lefts_arrow {
@@ -384,17 +579,23 @@
         top: -4rem;
         width: 240px;
     }
+    .lefts_arrow1 {
+        position: absolute;
+        left: 20rem;
+        top: -4rem;
+        width: 240px;
+    }
     .what_no1 {
         position: absolute;
         top: 13.5rem;
-        left: 17.3rem;
+        left: 18.3rem;
     }
     .group_one {
-        padding-right: 2rem;
+        padding-right: 2.5rem;
     }
     .what_no2 {
         position: absolute;
-        top: -3.2rem;
+        top: -3rem;
         right: 16.8rem;
     }
     .rights_arrow {
@@ -404,72 +605,1406 @@
     .what_no3 {
         position: absolute;
         top: -1.9rem;
-        left: 16.5rem;
+        left: 18.5rem;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1100px) {
+    .what_desp_width {
+        width: 51rem;
+    }
     .what_desp {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         line-height: 2.118rem;
-        text-align: center;
+    }
+    .left_img {
+        width: 25rem;
+    }
+    .right_img {
+        width: 25rem;
+    }
+    .what_sub_box1 {
+        z-index: 0;
+    }
+    .what_sub_box2 {
+        position: absolute;
+        right: 3rem;
+        top: 10rem;
+        z-index: 0;
+    }
+    .what_sub_box {
+        position: absolute;
+        right: 3rem;
+        top: 9rem;
+        z-index: 1;
+    }
+    .what_sub_box_1 {
+        position: absolute;
+        left: 3rem;
+        top: -1rem;
+        z-index: 1;
+    }
+
+    .what_sub_box_2 {
+        position: absolute;
+        right: 3rem;
+        top: 12rem;
+        z-index: 1;
+    }
+    .what_sub_box3 {
+        position: absolute;
+        left: 3rem;
+        top: 3rem;
+        z-index: 0;
+    }
+
+    .lefts_arrow1 {
+        position: absolute;
+        left: 25rem;
+        top: 25rem;
+        width: 275px;
+    }
+
+    .what_sub_box_3 {
+        position: absolute;
+        left: 3rem;
+        top: 11rem;
+        z-index: 1;
+    }
+    .what_sub_box4 {
+        position: absolute;
+        right: 3rem;
+        top: 3rem;
+        z-index: 0;
+    }
+
+    .what_btn_margin {
+        margin-top: 32rem;
     }
     .what_pad {
-        padding-left: 0rem;
+        padding-left: 3rem;
         padding-right: 0rem;
-    }   
+    }
+    .what_pad1 {
+        padding-left: 7rem;
+        padding-right: 0rem;
+    }
     .whats_pad {
-        padding-left: 8rem;
+        padding-top: 9rem;
+        padding-left: 40rem;
     }
     .what_no {
         position: absolute;
         top: -4.2rem;
-        right: 17.5rem;
+        right: 23.5rem;
     }
     .lefts_arrow {
         position: absolute;
-        left: 17rem;
+        left: 6rem;
         top: -4rem;
-        width: 240px;
+        width: 390px;
     }
     .what_no1 {
         position: absolute;
-        top: 13.5rem;
-        left: 17.3rem;
+        top: 5.6rem;
+        left: 41.3rem;
+    }
+
+    .fouth_section {
+        padding-top: 28rem;
+        padding-left: 3rem;
     }
     .group_one {
-        padding-right: 2rem;
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 23rem;
+        padding-left: 3rem;
     }
     .what_no2 {
         position: absolute;
-        top: -3.2rem;
-        right: 16.8rem;
+        top: -1.5rem;
+        left: 1.2rem;
     }
     .rights_arrow {
         position: absolute;
-        left: 21rem;
+        left: 17rem;
+        top: 21rem;
+        width: 210px;
     }
     .what_no3 {
         position: absolute;
-        top: -1.9rem;
-        left: 16.5rem;
+        top: -1.5rem;
+        left: 22.8rem;
     }
 }
 
 /* lg */
 
-@media (min-width: 768px) and (max-width: 992px) {
-    
+@media (min-width: 880px) and (max-width: 992px) {
+    .what_desp_width {
+        width: 51rem;
+    }
+
+    .what_desp {
+        font-size: 1.3rem;
+        line-height: 1.7rem;
+    }
+
+    .left_img {
+        width: 21rem;
+    }
+    .right_img {
+        width: 25rem;
+    }
+    .what_sub_box1 {
+        z-index: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .what_sub_box2 {
+        position: absolute;
+        right: 3rem;
+        top: 14rem;
+        z-index: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .what_sub_box {
+        position: absolute;
+        right: 3rem;
+        top: 7rem;
+        z-index: 1;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .what_sub_box_1 {
+        position: absolute;
+        left: 3rem;
+        top: 3rem;
+        z-index: 1;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .what_sub_box_2 {
+        position: absolute;
+        right: 3rem;
+        top: 12rem;
+        z-index: 1;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .what_sub_box3 {
+        position: absolute;
+        left: 3rem;
+        top: 3rem;
+        z-index: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .lefts_arrow1 {
+        position: absolute;
+        left: 19rem;
+        top: 24.5rem;
+        width: 275px;
+    }
+
+    .what_sub_box_3 {
+        position: absolute;
+        left: 3rem;
+        top: 11rem;
+        z-index: 1;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .what_sub_box4 {
+        position: absolute;
+        right: 3rem;
+        top: 3rem;
+        z-index: 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    .what_btn_margin {
+        margin-top: 32rem;
+    }
+    .what_pad {
+        padding-left: 3rem;
+        padding-right: 0rem;
+    }
+    .what_pad1 {
+        padding-left: 7rem;
+        padding-right: 0rem;
+    }
+    .whats_pad {
+        padding-top: 9rem;
+        padding-left: 33rem;
+    }
+    .what_no {
+        position: absolute;
+        top: -4.2rem;
+        right: 17.5rem;
+    }
+    .lefts_arrow {
+        position: absolute;
+        left: 1rem;
+        top: -4rem;
+        width: 450px;
+    }
+    .what_no1 {
+        position: absolute;
+        top: 9.6rem;
+        left: 34.3rem;
+    }
+
+    .fouth_section {
+        padding-top: 28rem;
+        padding-left: 3rem;
+    }
+    .group_one {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 28rem;
+        padding-left: 3rem;
+    }
+    .what_no2 {
+        position: absolute;
+        top: -1.5rem;
+        left: 1.2rem;
+    }
+    .rights_arrow {
+        position: absolute;
+        left: 15rem;
+        top: 24rem;
+        width: 240px;
+    }
+    .what_no3 {
+        position: absolute;
+        top: -1.5rem;
+        left: 22.8rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 880px) {
+    .what_desp_width {
+        width: 51rem;
+    }
+
+    .what_desp {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    .left_img {
+        width: 21rem;
+    }
+    .right_img {
+        width: 25rem;
+    }
+    .what_sub_box1 {
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+    .what_sub_box2 {
+        position: absolute;
+        right: 3rem;
+        top: 12rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+    .what_sub_box {
+        position: absolute;
+        right: 3rem;
+        top: 6rem;
+        z-index: 1;
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+    .what_sub_box_1 {
+        position: absolute;
+        left: 3rem;
+        top: 3rem;
+        z-index: 1;
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+
+    .what_sub_box_2 {
+        position: absolute;
+        right: 3rem;
+        top: 12rem;
+        z-index: 1;
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+    .what_sub_box3 {
+        position: absolute;
+        left: 3rem;
+        top: 3rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .lefts_arrow1 {
+        position: absolute;
+        left: 10rem;
+        top: 23.5rem;
+        width: 275px;
+    }
+
+    .what_sub_box_3 {
+        position: absolute;
+        left: 3rem;
+        top: 11rem;
+        z-index: 1;
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+    .what_sub_box4 {
+        position: absolute;
+        right: 3rem;
+        top: 3rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .what_btn_margin {
+        margin-top: 28rem;
+    }
+    .what_pad {
+        padding-left: 3rem;
+        padding-right: 0rem;
+    }
+    .what_pad1 {
+        padding-left: 7rem;
+        padding-right: 0rem;
+    }
+    .whats_pad {
+        padding-top: 9rem;
+        padding-left: 26rem;
+    }
+    .what_no {
+        position: absolute;
+        top: -4.2rem;
+        right: 13.5rem;
+    }
+    .lefts_arrow {
+        position: absolute;
+        left: 1rem;
+        top: -4rem;
+        width: 450px;
+    }
+    .what_no1 {
+        position: absolute;
+        top: 7.6rem;
+        left: 27.3rem;
+    }
+
+    .fouth_section {
+        padding-top: 28rem;
+        padding-left: 3rem;
+    }
+    .group_one {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 23rem;
+        padding-left: 3rem;
+    }
+    .what_no2 {
+        position: absolute;
+        top: -1.5rem;
+        left: 1.2rem;
+    }
+    .rights_arrow {
+        position: absolute;
+        left: 15rem;
+        top: 19rem;
+        width: 240px;
+    }
+    .what_no3 {
+        position: absolute;
+        top: -1.5rem;
+        left: 11.8rem;
+    }
+    .groups_img {
+        position: absolute;
+        right: 0rem;
+        top: -8rem;
+        z-index: 1;
+    }
 }
 
 /* md */
 
-@media (min-width: 576px) and (max-width: 768px) {
-   
+@media (min-width: 668px) and (max-width: 768px) {
+    .what_body {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .what_title {
+        font-size: 2.1rem;
+        line-height: 2.1rem;
+    }
+    .what_desp_width {
+        width: 51rem;
+    }
+
+    .what_desp {
+        font-size: 0.88rem;
+        line-height: 1.5rem;
+    }
+    .left_img {
+        width: 18rem;
+    }
+    .right_img {
+        width: 25rem;
+    }
+    .what_sub_box1 {
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+    .what_sub_box2 {
+        position: absolute;
+        right: 3rem;
+        top: 7rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+    .what_sub_box {
+        position: absolute;
+        right: 3rem;
+        top: 6rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .what_sub_box_1 {
+        position: absolute;
+        left: 3rem;
+        top: 0rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .what_sub_box_2 {
+        position: absolute;
+        right: 3rem;
+        top: 9rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .what_sub_box3 {
+        position: absolute;
+        left: 3rem;
+        top: 3rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .lefts_arrow1 {
+        position: absolute;
+        left: 10rem;
+        top: 17.5rem;
+        width: 275px;
+    }
+
+    .what_sub_box_3 {
+        position: absolute;
+        left: 3rem;
+        top: 8rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .what_sub_box4 {
+        position: absolute;
+        right: 3rem;
+        top: 3rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .what_btn_margin {
+        margin-top: 28rem;
+    }
+    .what_pad {
+        padding-left: 3rem;
+        padding-right: 0rem;
+    }
+    .what_pad1 {
+        padding-left: 7rem;
+        padding-right: 0rem;
+    }
+    .whats_pad {
+        padding-top: 6rem;
+        padding-left: 24rem;
+    }
+    .what_no {
+        position: absolute;
+        top: -4.2rem;
+        right: 13.5rem;
+    }
+    .last_width {
+        width: 14rem;
+    }
+    .lefts_arrow {
+        position: absolute;
+        left: 0rem;
+        top: -4rem;
+        width: 330px;
+    }
+    .what_no1 {
+        position: absolute;
+        top: 2.6rem;
+        left: 24.3rem;
+    }
+
+    .fouth_section {
+        padding-top: 22rem;
+        padding-left: 3rem;
+    }
+    .group_one {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 18rem;
+        padding-left: 3rem;
+    }
+    .what_no2 {
+        position: absolute;
+        top: -1.5rem;
+        left: 1.2rem;
+    }
+    .rights_arrow {
+        position: absolute;
+        left: 11rem;
+        top: 14rem;
+        width: 240px;
+    }
+    .what_no3 {
+        position: absolute;
+        top: -1.5rem;
+        left: 11.8rem;
+    }
+    .groups_img {
+        position: absolute;
+        right: 0rem;
+        top: -8rem;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 668px) {
+    .what_title {
+        font-size: 2.1rem;
+        line-height: 2.1rem;
+    }
+    .what_desp_width {
+        width: 51rem;
+    }
+
+    .what_desp {
+        font-size: 0.88rem;
+        line-height: 1.5rem;
+    }
+
+    .what_desp {
+        font-size: 0.88rem;
+        line-height: 1.5rem;
+    }
+    .left_img {
+        width: 18rem;
+    }
+    .right_img {
+        width: 25rem;
+    }
+    .what_sub_box1 {
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+    .what_sub_box2 {
+        position: absolute;
+        right: 3rem;
+        top: 7rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+    .what_sub_box {
+        position: absolute;
+        right: 3rem;
+        top: 6rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .what_sub_box_1 {
+        position: absolute;
+        left: 3rem;
+        top: 0rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .what_sub_box_2 {
+        position: absolute;
+        right: 3rem;
+        top: 9rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .what_sub_box3 {
+        position: absolute;
+        left: 3rem;
+        top: 3rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .lefts_arrow1 {
+        position: absolute;
+        left: 12rem;
+        top: 17.5rem;
+        width: 275px;
+    }
+
+    .what_sub_box_3 {
+        position: absolute;
+        left: 3rem;
+        top: 8rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .what_sub_box4 {
+        position: absolute;
+        right: 3rem;
+        top: 3rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .what_btn_margin {
+        margin-top: 28rem;
+    }
+    .what_pad {
+        padding-left: 3rem;
+        padding-right: 0rem;
+    }
+    .what_pad1 {
+        padding-left: 7rem;
+        padding-right: 0rem;
+    }
+    .whats_pad {
+        padding-top: 6rem;
+        padding-left: 24rem;
+    }
+    .what_no {
+        position: absolute;
+        top: -4.2rem;
+        right: 13.5rem;
+    }
+    .last_width {
+        width: 14rem;
+    }
+    .lefts_arrow {
+        position: absolute;
+        left: 0rem;
+        top: -4rem;
+        width: 330px;
+    }
+    .what_no1 {
+        position: absolute;
+        top: 2.6rem;
+        left: 24.3rem;
+    }
+
+    .fouth_section {
+        padding-top: 22rem;
+        padding-left: 3rem;
+    }
+    .group_one {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 18rem;
+        padding-left: 3rem;
+    }
+    .what_no2 {
+        position: absolute;
+        top: -1.5rem;
+        left: 1.2rem;
+    }
+    .rights_arrow {
+        position: absolute;
+        left: 11rem;
+        top: 14rem;
+        width: 240px;
+    }
+    .what_no3 {
+        position: absolute;
+        top: -1.5rem;
+        left: 11.8rem;
+    }
+    .groups_img {
+        position: absolute;
+        right: 0rem;
+        top: -8rem;
+        z-index: 1;
+    }
 }
 
 /* sm */
 
-@media (min-width: 300px) and (max-width: 576px) {
-    
+@media (min-width: 476px) and (max-width: 576px) {
+    .what_body {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    .what_box {
+        padding-top: 1.375rem;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+    }
+    .what_title {
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+    }
+    .what_desp_width {
+        width: 100%;
+    }
+
+    .what_desp {
+        font-size: 0.9rem;
+        line-height: 1rem;
+    }
+
+    .what_desp {
+        font-size: 0.88rem;
+        line-height: 1.5rem;
+    }
+
+    .what_desp {
+        font-size: 0.88rem;
+        line-height: 1.5rem;
+    }
+    .left_img {
+        width: 13rem;
+    }
+    .right_img {
+        width: 25rem;
+    }
+    .what_sub_box1 {
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+    .what_sub_box2 {
+        position: absolute;
+        right: 5rem;
+        top: 5rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+    .what_sub_box {
+        position: absolute;
+        right: 4rem;
+        top: 3rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .what_sub_box_1 {
+        position: absolute;
+        left: 3rem;
+        top: 0rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .what_sub_box_2 {
+        position: absolute;
+        right: 4rem;
+        top: 6rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .what_sub_box3 {
+        position: absolute;
+        left: 3rem;
+        top: 3rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .lefts_arrow1 {
+        position: absolute;
+        left: 12rem;
+        top: 10rem;
+        width: 175px;
+    }
+
+    .what_sub_box_3 {
+        position: absolute;
+        left: 4rem;
+        top: 6rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .what_sub_box4 {
+        position: absolute;
+        right: 3rem;
+        top: 3rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .what_btn_margin {
+        margin-top: 16rem;
+    }
+    .what_pad {
+        padding-left: 3rem;
+        padding-right: 0rem;
+    }
+    .what_pad1 {
+        padding-left: 7rem;
+        padding-right: 0rem;
+    }
+    .whats_pad {
+        padding-top: 2rem;
+        padding-left: 20rem;
+    }
+    .what_no {
+        font-size: 2.5rem;
+        position: absolute;
+        top: -3.6rem;
+        right: 13.6rem;
+    }
+    .last_width {
+        width: 10rem;
+    }
+    .lefts_arrow {
+        position: absolute;
+        left: 2rem;
+        top: -4rem;
+        width: 200px;
+    }
+    .what_no1 {
+        font-size: 2.5rem;
+        position: absolute;
+        top: 1.6rem;
+        left: 19.3rem;
+    }
+
+    .fouth_section {
+        padding-top: 12rem;
+        padding-left: 3rem;
+    }
+    .group_one {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 9rem;
+        padding-left: 3rem;
+    }
+    .what_no2 {
+        font-size: 2.5rem;
+        position: absolute;
+        top: -0.6rem;
+        left: 1.2rem;
+    }
+    .rights_arrow {
+        position: absolute;
+        left: 7rem;
+        top: 7rem;
+        width: 150px;
+    }
+    .what_no3 {
+        font-size: 2.5rem;
+        position: absolute;
+        top: -0.7rem;
+        left: 12rem;
+    }
+    .groups_img {
+        position: absolute;
+        right: 2rem;
+        top: -5rem;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 476px) {
+    .what_body {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    .what_box {
+        padding-top: 1.375rem;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+    }
+    .what_title {
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+    }
+    .what_desp_width {
+        width: 100%;
+    }
+
+    .what_desp {
+        font-size: 0.7rem;
+        line-height: 1rem;
+    }
+    .left_img {
+        width: 13rem;
+    }
+    .right_img {
+        width: 25rem;
+    }
+    .what_sub_box1 {
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+    .what_sub_box2 {
+        position: absolute;
+        right: 1rem;
+        top: 5rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+    .what_sub_box {
+        position: absolute;
+        right: 1rem;
+        top: 3rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .what_sub_box_1 {
+        position: absolute;
+        left: 3rem;
+        top: 0rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .what_sub_box_2 {
+        position: absolute;
+        right: 1rem;
+        top: 6rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .what_sub_box3 {
+        position: absolute;
+        left: 3rem;
+        top: 3rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .lefts_arrow1 {
+        position: absolute;
+        left: 8rem;
+        top: 10rem;
+        width: 175px;
+    }
+
+    .what_sub_box_3 {
+        position: absolute;
+        left: 2rem;
+        top: 6rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .what_sub_box4 {
+        position: absolute;
+        right: 3rem;
+        top: 3rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .what_btn_margin {
+        margin-top: 16rem;
+    }
+    .what_pad {
+        padding-left: 3rem;
+        padding-right: 0rem;
+    }
+    .what_pad1 {
+        padding-left: 7rem;
+        padding-right: 0rem;
+    }
+    .whats_pad {
+        padding-top: 2rem;
+        padding-left: 18rem;
+    }
+    .what_no {
+        font-size: 2.5rem;
+        position: absolute;
+        top: -3.6rem;
+        right: 13.6rem;
+    }
+    .last_width {
+        width: 10rem;
+    }
+    .lefts_arrow {
+        position: absolute;
+        left: 2rem;
+        top: -4rem;
+        width: 200px;
+    }
+    .what_no1 {
+        font-size: 2.5rem;
+        position: absolute;
+        top: 1.6rem;
+        left: 18.3rem;
+    }
+
+    .fouth_section {
+        padding-top: 12rem;
+        padding-left: 3rem;
+    }
+    .group_one {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 9rem;
+        padding-left: 3rem;
+    }
+    .what_no2 {
+        font-size: 2.5rem;
+        position: absolute;
+        top: -0.6rem;
+        left: 1.2rem;
+    }
+    .rights_arrow {
+        position: absolute;
+        left: 7rem;
+        top: 7rem;
+        width: 150px;
+    }
+    .what_no3 {
+        font-size: 2.5rem;
+        position: absolute;
+        top: -0.7rem;
+        left: 12rem;
+    }
+    .groups_img {
+        position: absolute;
+        right: 2rem;
+        top: -5rem;
+        z-index: 1;
+    }
+}
+
+@media (min-width: 350px) and (max-width: 400px) {
+    .what_body {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+    .what_box {
+        padding-top: 1.375rem;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+    }
+    .what_title {
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+    }
+    .what_desp_width {
+        width: 100%;
+    }
+
+    .what_desp {
+        font-size: 0.7rem;
+        line-height: 1rem;
+    }
+    .left_img {
+        width: 10rem;
+    }
+    .right_img {
+        width: 25rem;
+    }
+    .what_sub_box1 {
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+    .what_sub_box2 {
+        position: absolute;
+        right: 1rem;
+        top: 5rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+    .what_sub_box {
+        position: absolute;
+        right: 1rem;
+        top: 3rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .what_sub_box_1 {
+        position: absolute;
+        left: 3rem;
+        top: 0rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .what_sub_box_2 {
+        position: absolute;
+        right: 1rem;
+        top: 6rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .what_sub_box3 {
+        position: absolute;
+        left: 3rem;
+        top: 3rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .lefts_arrow1 {
+        position: absolute;
+        left: 8rem;
+        top: 10rem;
+        width: 175px;
+    }
+
+    .what_sub_box_3 {
+        position: absolute;
+        left: 2rem;
+        top: 6rem;
+        z-index: 1;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .what_sub_box4 {
+        position: absolute;
+        right: 3rem;
+        top: 3rem;
+        z-index: 0;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .what_btn_margin {
+        margin-top: 16rem;
+    }
+    .what_pad {
+        padding-left: 3rem;
+        padding-right: 0rem;
+    }
+    .what_pad1 {
+        padding-left: 7rem;
+        padding-right: 0rem;
+    }
+    .whats_pad {
+        padding-top: 2rem;
+        padding-left: 16rem;
+    }
+    .what_no {
+        font-size: 2.5rem;
+        position: absolute;
+        top: -3.6rem;
+        right: 7.6rem;
+    }
+    .last_width {
+        width: 10rem;
+    }
+    .lefts_arrow {
+        position: absolute;
+        left: 2rem;
+        top: -4rem;
+        width: 200px;
+    }
+    .what_no1 {
+        font-size: 2.5rem;
+        position: absolute;
+        top: 1.3rem;
+        left: 16.3rem;
+    }
+
+    .fouth_section {
+        padding-top: 12rem;
+        padding-left: 3rem;
+    }
+    .group_one {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 9rem;
+        padding-left: 3rem;
+    }
+    .what_no2 {
+        font-size: 2.5rem;
+        position: absolute;
+        top: -0.6rem;
+        left: 1.2rem;
+    }
+    .rights_arrow {
+        position: absolute;
+        left: 7rem;
+        top: 7rem;
+        width: 150px;
+    }
+    .what_no3 {
+        font-size: 2.5rem;
+        position: absolute;
+        top: -0.7rem;
+        left: 12rem;
+    }
+    .groups_img {
+        position: absolute;
+        right: 2rem;
+        top: -5rem;
+        z-index: 1;
+    }
 }

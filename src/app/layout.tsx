@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={(inter.variable, poppins.variable, caveat.variable, dmSans.variable)}>{children}</body>
+      <body className={`${inter.variable} ${poppins.variable} ${caveat.variable} ${dmSans.variable}`}>{children}</body>
     </html>
   );
 }

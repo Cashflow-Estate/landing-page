@@ -17,7 +17,6 @@ import Slider from "react-slick";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
 const HeroComponent: React.FC = () => {
 
     const [isSoundEnabled, setIsSoundEnabled] = useState(false);
@@ -109,14 +108,14 @@ const HeroComponent: React.FC = () => {
     return (
         <>
             {hero.map((item) => (
-                <div key={item.id} className='hero_body px-12 sm:px-6 md:px-10 pt-14 relative'>
-                    <p className='font-caveat text-4xl font-bold text-customblack text-center sm:text-lg md:text-lg lg:text-xl xl:text-3xl 2xl:text-3xl'>{item.tie}</p>
-                    <div className='mt-2.5 flex justify-center'>
-                        <p className='font-inter font-black text-customblack text-center hero_des'>
-                            The #1 <span className='text-customorange text-shadow'>AI-Based Platform</span> For Your Slow Flip Properties.
-                        </p>
-                    </div>
-                    <div className='mt-6 flex justify-center'>
+                <div key={item.id} className='hero_body px-12 sm:px-6 md:px-10 pt-12 relative'>
+                    <p className="font-caveat text-4xl font-bold text-customblack text-center sm:text-lg md:text-lg lg:text-xl xl:text-3xl 2xl:text-3xl">
+                        {item.tie}
+                    </p>
+                    <p className='font-inter font-black text-customblack text-center hero_des mt-3'>
+                        The #1 <span className='text-customorange'>AI-Based Platform</span> For Your Slow Flip Properties.
+                    </p>
+                    <div className='mt-4 flex justify-center'>
                         <div className='desp_width'>
                             <p className='font-inter text-4xl font-medium text-center sm:text-sm md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl'>
                                 {item.description}
@@ -129,16 +128,16 @@ const HeroComponent: React.FC = () => {
                             <Image src={item.img} alt="" width={13} height={8} priority />
                         </button>
                     </div>
-                    <div className='flex justify-center gap-1 items-center mt-5'>
+                    <div className='flex justify-center gap-1 items-center mt-4'>
                         <p className='text-center font-inter font-base text-customblack font-semibold'>{item.dep}</p>
                         <p className='text-center hero-list-item font-inter font-base text-customblack font-semibold'>{item.delivery}</p>
                     </div>
                 </div>
             ))}
 
-            <div className="grid grid-cols-6 gap-5 mt-10 hero_card sm:hidden md:hidden lg:hidden xl:hidden">
+            <div className="grid grid-cols-6 gap-5 mt-12 hero_card sm:hidden md:hidden lg:hidden xl:hidden">
                 {heroCards.map((item) => (
-                    <div key={item.id} className='bg-custombrown pt-3.5 px-8 2xl:px-4 pb-7 flex flex-col gap-3 2xl:gap-3 justify-center items-center rounded-3xl hero_btn hover:bg-customblue group' data-aos="fade-up">
+                    <div key={item.id} className='bg-custombrown pt-3.5 px-8 2xl:px-4 pb-7 flex flex-col gap-3 2xl:gap-3 justify-center items-center rounded-3xl hero_btn hover:bg-customblue group'>
                         <div className='2xl:h-12'>
                             <item.icon className='text-5xl text-customblue group-hover:text-white' />
                         </div>
@@ -151,10 +150,10 @@ const HeroComponent: React.FC = () => {
                 ))}
             </div>
             {/* sm to xl */}
-            <div className='mt-10 hero_card sm:block md:block lg:block xl:block 2xl:hidden hidden' >
+            <div className='mt-12 hero_card sm:block md:block lg:block xl:block 2xl:hidden hidden' >
                 <Slider {...settings}>
                     {heroCards.map((item) => (
-                        <div key={item.id} className="p-2" data-aos="fade-up">
+                        <div key={item.id} className="p-2">
                             <div className='bg-custombrown pt-3.5 px-8 sm:px-3.5 md:px-3.5 pb-7 flex flex-col gap-3 2xl:gap-3 justify-center items-center rounded-3xl hero_btn hover:bg-customblue text-customblack hover:text-white'>
                                 <item.icon className='text-5xl text-customblue group-hover:text-white' />
                                 <div className='md:h-16 lg:h-16'>
@@ -169,8 +168,8 @@ const HeroComponent: React.FC = () => {
                 </Slider>
             </div>
             <div className='hero_video mt-20'>
-                <p className='font-inter text-customblack font-bold hero_video_title' data-aos="fade-up">Watch The Video Below to Learn More About Cashflow Innovator.</p>
-                <div className='hero_bg_img mt-10 relative' data-aos="fade-up">
+                <p className='font-inter text-customblack font-bold hero_video_title'>Watch The Video Below to Learn More About Cashflow Innovator.</p>
+                <div className='hero_bg_img mt-10 relative'>
                     <div className='flex gap-2 items-center pt-96 pl-10 z-10'>
                         {!isSoundEnabled ? (
                             <Image
