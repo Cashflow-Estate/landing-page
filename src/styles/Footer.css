@@ -39,3 +39,24 @@
     font-size: 0.813rem;
     line-height: 1.138rem;
 }
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .footer_body {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .footer_body {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 576px) {
+    .footer_body {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}

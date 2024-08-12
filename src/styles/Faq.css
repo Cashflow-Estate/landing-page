@@ -3,6 +3,7 @@
     padding-left: 4rem;
     padding-right: 4rem;
     padding-bottom: 5.125rem;
+    overflow: hidden;
 }
 
 .font-title{
@@ -23,6 +24,19 @@
     border-radius: 18px;
 }
 
+.faqs_desp:hover{
+    animation: pulses 2s forwards;
+}
+
+@keyframes pulses {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.06);
+    }
+}
+
 .faqs_head{
     font-size: 1.375rem;
     line-height: 1.75rem;
@@ -40,4 +54,83 @@
 
 .faq_width{
     width: 45rem;
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .faqs_desp {
+        padding-left: 7rem;
+        padding-right: 7rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .faqs_desp {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .faqs_desp {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .faqs_head {
+        font-size: 1.23rem;
+        line-height: 1.75rem;
+    }
+
+    .faq_width {
+        padding-top: 1rem;
+        width: 33rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .faq_body {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .faqs_desp {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .faqs_head {
+        font-size: 1.10rem;
+        line-height: 1.75rem;
+    }
+
+    .faq_width {
+        padding-top: 1rem;
+        width: 25rem;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 576px) {
+    .faq_body {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+
+    .font-title {
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+    }
+
+    .faqs_desp {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .faqs_head {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+
+    .faq_width {
+        padding-top: 1rem;
+        width: 18rem;
+    }
 }

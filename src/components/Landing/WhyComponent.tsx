@@ -7,8 +7,6 @@ import { TiTick } from "react-icons/ti";
 import { IoCloseSharp } from "react-icons/io5";
 import Circle_bg from '../../../public/images/why/circle_big.png'
 import Circle_small from '../../../public/images/why/circle_small.png'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const WhyComponent: React.FC = () => {
 
@@ -26,7 +24,7 @@ const WhyComponent: React.FC = () => {
         const handleScroll = () => {
             sectionRefs.current.forEach((section) => {
                 const sectionRect = section.getBoundingClientRect();
-                const isVisible = sectionRect.top < window.innerHeight && sectionRect.bottom > 0;
+                const isVisible = sectionRect.top < window.innerHeight;
 
                 if (isVisible) {
                     section.classList.add('show');
@@ -42,118 +40,108 @@ const WhyComponent: React.FC = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    useEffect(() => {
-        AOS.init({
-            offset: 300,
-            duration: 1000,
-        });
-    }, []); // Run this effect only once when the component mounts
-
-
-
     return (
         <>
             <div className='body_why'>
                 <div className='why_box relative'>
-                    <Image src={Circle_bg} alt='' style={{ position: "absolute", left: "2rem", top: "3rem" }} />
-                    <Image src={Circle_small} alt='' style={{ position: "absolute", left: "5rem", top: "6rem" }} />
-                    <Image src={Circle_bg} alt='' style={{ position: "absolute", right: "8rem", top: "20rem" }} />
-                    <Image src={Circle_small} alt='' style={{ position: "absolute", right: "5.9rem", top: "22.5rem" }} />
-                    <p className='font-inter why_title font-bold text-center' data-aos="fade-up">Why <span className='text-customorange'>Choose</span> Cashflow Innovator ?</p>
-                    <div ref={addToSectionRefs} className={`flex gap-1 justify-center items-center stairs-animation`}
-                        style={{ marginTop: "3.125rem" }}>
-                        <div className='why_table_title bg-customblue text-white font-inter text-2xl font-bold'>
+                    <Image src={Circle_bg} alt='' className='dot' />
+                    <Image src={Circle_small} alt='' className='dot_one' />
+                    <Image src={Circle_bg} alt='' className='dot_two'  />
+                    <Image src={Circle_small} alt='' className='dot_three' />
+                    <p className='font-inter why_title font-bold text-center'>Why <span className='text-customorange'>Choose</span> Cashflow Innovator ?</p>
+                    <div ref={addToSectionRefs} className={`flex gap-1 justify-center items-center stairs-animation table_margin`}>
+                        <div className='why_table_title bg-customblue text-white font-inter text-2xl sm:text-base md:text-lg lg:text-lg xl:text-xl font-bold text-center'>
                             Features
                         </div>
-                        <div className='why_table_title1 bg-customblue text-white font-inter text-xl font-bold'>
+                        <div className='why_table_title1 bg-customblue text-white font-inter text-xl sm:text-xs md:text-base lg:text-base xl:text-lg font-bold text-center'>
                             With Cashflow Innovator
                         </div>
-                        <div className='why_table_title2 bg-customblue text-white font-inter text-xl font-bold'>
+                        <div className='why_table_title2 bg-customblue text-white font-inter text-xl sm:text-xs md:text-base lg:text-base xl:text-lg font-bold text-center'>
                             Without Cashflow Innovator
                         </div>
                     </div>
 
                     <div ref={addToSectionRefs} className={`flex gap-1 justify-center items-center stairs-animation`}
                         style={{ marginTop: "0.625rem" }}>
-                        <div className='why_table_content bg-white text-customblackish font-inter text-base font-bold'>
+                        <div className='why_table_content bg-white text-customblackish font-inter text-base sm:text-xs md:text-sm lg:text-sm xl:text-sm 2xl:text-sm	text-center font-bold flex items-center justify-center'>
                             Stream of Customers
                         </div>
                         <div className='why_table_content1 bg-white text-customblackish'>
                             <div className='w-9 h-9 bg-customlight flex justify-center items-center' style={{ borderRadius: "50px" }}>
-                                <TiTick className='text-customgreen text-xl' />
+                                <TiTick className='text-customgreen text-2xl' />
                             </div>
                         </div>
                         <div className='why_table_content2 bg-white text-customblackish'>
                             <div className='bg-customlight flex justify-center items-center' style={{ width: "2.125rem", height: "2.125rem", borderRadius: "4px" }}>
-                                <IoCloseSharp className='text-customred text-xl' />
+                                <IoCloseSharp className='text-customred text-2xl' />
                             </div>
                         </div>
                     </div>
 
                     <div ref={addToSectionRefs} className={`flex gap-1 justify-center items-center stairs-animation`}
                         style={{ marginTop: "0.625rem" }}>
-                        <div className='why_table_content bg-white text-customblackish font-inter text-base font-bold'>
-                            Simple Buying Process
+                        <div className='why_table_content bg-white text-customblackish font-inter text-base sm:text-xs md:text-sm lg:text-sm xl:text-sm 2xl:text-sm text-center font-bold flex items-center justify-center'>
+                        Automatic Amortization Calculation
                         </div>
                         <div className='why_table_content1 bg-white text-customblackish'>
                             <div className='w-9 h-9 bg-customlight flex justify-center items-center' style={{ borderRadius: "50px" }}>
-                                <TiTick className='text-customgreen text-xl' />
+                                <TiTick className='text-customgreen text-2xl' />
                             </div>
                         </div>
                         <div className='why_table_content2 bg-white text-customblackish'>
                             <div className='bg-customlight flex justify-center items-center' style={{ width: "2.125rem", height: "2.125rem", borderRadius: "4px" }}>
-                                <IoCloseSharp className='text-customred text-xl' />
+                                <IoCloseSharp className='text-customred text-2xl' />
                             </div>
                         </div>
                     </div>
 
                     <div ref={addToSectionRefs} className={`flex gap-1 justify-center items-center stairs-animation`}
                         style={{ marginTop: "0.625rem" }}>
-                        <div className='why_table_content bg-white text-customblackish font-inter text-base font-bold'>
-                            Sales Grow
+                        <div className='why_table_content bg-white text-customblackish font-inter text-base sm:text-xs md:text-sm lg:text-sm xl:text-sm 2xl:text-sm text-center font-bold flex items-center justify-center'>
+                        Automatic Payment Collection 
                         </div>
                         <div className='why_table_content1 bg-white text-customblackish'>
                             <div className='w-9 h-9 bg-customlight flex justify-center items-center' style={{ borderRadius: "50px" }}>
-                                <TiTick className='text-customgreen text-xl' />
+                                <TiTick className='text-customgreen text-2xl' />
                             </div>
                         </div>
                         <div className='why_table_content2 bg-white text-customblackish'>
                             <div className='bg-customlight flex justify-center items-center' style={{ width: "2.125rem", height: "2.125rem", borderRadius: "4px" }}>
-                                <IoCloseSharp className='text-customred text-xl' />
+                                <IoCloseSharp className='text-customred text-2xl' />
                             </div>
                         </div>
                     </div>
 
                     <div ref={addToSectionRefs} className={`flex gap-1 justify-center items-center stairs-animation`}
                         style={{ marginTop: "0.625rem" }}>
-                        <div className='why_table_content bg-white text-customblackish font-inter text-base font-bold'>
-                            Opposite of Saddness
+                        <div className='why_table_content bg-white text-customblackish font-inter text-base sm:text-xs md:text-sm lg:text-sm xl:text-sm 2xl:text-sm text-center font-bold flex items-center justify-center'>
+                        Eviction Initiating
                         </div>
                         <div className='why_table_content1 bg-white text-customblackish'>
                             <div className='w-9 h-9 bg-customlight flex justify-center items-center' style={{ borderRadius: "50px" }}>
-                                <TiTick className='text-customgreen text-xl' />
+                                <TiTick className='text-customgreen text-2xl' />
                             </div>
                         </div>
                         <div className='why_table_content2 bg-white text-customblackish'>
                             <div className='bg-customlight flex justify-center items-center' style={{ width: "2.125rem", height: "2.125rem", borderRadius: "4px" }}>
-                                <IoCloseSharp className='text-customred text-xl' />
+                                <IoCloseSharp className='text-customred text-2xl' />
                             </div>
                         </div>
                     </div>
 
                     <div ref={addToSectionRefs} className={`flex gap-1 justify-center items-center stairs-animation`}
                         style={{ marginTop: "0.625rem" }}>
-                        <div className='why_table_content bg-white text-customblackish font-inter text-base font-bold'>
-                            AI Agent
+                        <div className='why_table_content bg-white text-customblackish font-inter text-base sm:text-xs md:text-sm lg:text-sm xl:text-sm 2xl:text-sm text-center font-bold flex justify-center items-center'>
+                        AI Property Management
                         </div>
                         <div className='why_table_content1 bg-white text-customblackish'>
                             <div className='w-9 h-9 bg-customlight flex justify-center items-center' style={{ borderRadius: "50px" }}>
-                                <TiTick className='text-customgreen text-xl' />
+                                <TiTick className='text-customgreen text-2xl' />
                             </div>
                         </div>
                         <div className='why_table_content2 bg-white text-customblackish'>
                             <div className='bg-customlight flex justify-center items-center' style={{ width: "2.125rem", height: "2.125rem", borderRadius: "4px" }}>
-                                <IoCloseSharp className='text-customred text-xl' />
+                                <IoCloseSharp className='text-customred text-2xl' />
                             </div>
                         </div>
                     </div>

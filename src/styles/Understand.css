@@ -10,36 +10,39 @@
     position: absolute;
     bottom: 0;
     width: 100%;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-    transform: translateY(100%);
-    opacity: 0;
-}
-
-.default_div {
-    transition: opacity 0.5s ease;
+    overflow: hidden;
 }
 
 .understand_img {
     background-size: cover;
     background-position: center;
-    height: 370px; 
+    height: 370px;
     width: 100%;
-    position: relative;
-    overflow: hidden; /* Ensure that children don't overflow */
-}
-
-.understand_img:hover .default_div {
-    opacity: 0;
-}
-
-.understand_img:hover .under_body {
-    transform: translateY(0);
-    opacity: 1;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .desp_body {
     padding-top: 1.813rem;
     padding-right: 2rem;
+    padding-bottom: 0.938rem;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.hiddens {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.blocks {
+    max-height: 200px;
+    padding-top: 1.813rem;
     padding-bottom: 0.938rem;
 }
 
@@ -52,8 +55,53 @@
     width: 1.875rem;
     height: 1.875rem;
     border-radius: 50px;
-    background: white;
+    border: 1px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .desp_body {
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .understand_title {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    .desp_body {
+        padding-right: 1.2rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .understand_body {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .understand_title {
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    .desp_body {
+        padding-right: 1.2rem;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 576px) {
+    .understand_body {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+    .understand_title {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+    .desp_body {
+        padding-right: 1.2rem;
+    }
 }

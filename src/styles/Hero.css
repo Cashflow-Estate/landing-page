@@ -1,14 +1,10 @@
 .hero_body {
-    margin-top: 7.1rem;
+    margin-top: 5.8rem;
 }
 
 .hero_des {
-    font-size: 6.5rem;
+    font-size: 6.2rem;
     line-height: 99.24px;
-}
-
-.Typewriter__cursor{
-    display: none;
 }
 
 .text-shadow{
@@ -44,7 +40,7 @@
 }
 
 .hero_btn:hover {
-    animation: pulses 2s infinite;
+    animation: pulses 2s forwards;
 }
 
 @keyframes pulses {
@@ -66,7 +62,7 @@
 }
 
 .hero_video_title {
-    font-size: 2.90rem;
+    font-size: 2.80rem;
 }
 
 .hero-list-item {
@@ -100,12 +96,12 @@
 }
 
 .desp_width{
-    width: 55rem;
+    width: 57rem;
 }
 
 /* media query */
 
-@media (min-width: 1600px) and (max-width: 1630px) {
+@media (min-width: 1600px) and (max-width: 1650px) {
     .hero_video_title {
         font-size: 2.70rem;
     }
@@ -114,7 +110,7 @@
 @media (min-width: 1500px) and (max-width: 1600px) {
     .hero_des {
         font-size: 5.6rem;
-        line-height: 99.24px;
+        line-height: 85.24px;
     } 
     .hero_video_title {
         font-size: 2.50rem;
@@ -144,6 +140,10 @@
     .hero_video_title {
         font-size: 1.9rem;
     }
+    .hero_video {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
 }
 
 /* xxl */
@@ -160,6 +160,10 @@
         font-size: 1.9rem;
         text-align: center;
     }
+    .hero_video {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
 }
 
 /* lg */
@@ -170,7 +174,7 @@
         line-height: 60.24px;
     } 
     .desp_width{
-        width: 30rem;
+        width: 32rem;
     }
     .heros_btn {
         padding-left: 2rem;
@@ -179,6 +183,10 @@
     .hero_video_title {
         font-size: 1.6rem;
         text-align: center;
+    }
+    .hero_video {
+        padding-left: 4rem;
+        padding-right: 4rem;
     }
 }
 
@@ -218,7 +226,7 @@
         line-height: 40.24px;
     } 
     .desp_width{
-        width: 21rem;
+        width: 23rem;
     }
     .hero_card {
         padding-left: 1.5rem;

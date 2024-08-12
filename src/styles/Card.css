@@ -1,6 +1,6 @@
 .card_portion{
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 
 .card_img{
@@ -15,12 +15,23 @@
     line-height: 3.125rem;
 }
 
+.card_padding{
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
 .card_body{
     border-radius: 20px;
+    width: 370px;
 }
 
 .card_btn{
     border-radius: 10px;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.600rem;
+    padding-right: 1.600rem;
+
 }
 
 .custom-list-item {
@@ -35,4 +46,158 @@
     color: #2F9CEF; 
     font-size: 1.7em; 
     line-height: 1; 
+}
+
+.third_card{
+    padding-top: 1.75rem;
+}
+
+.third_card_padding{
+    padding-top: 5rem;
+}
+
+/* Media Query */
+
+@media (min-width: 1600px) and (max-width: 1650px) {
+    .card_padding{
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+}
+
+@media (min-width: 1500px) and (max-width: 1600px) {
+    .card_padding{
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1500px) {
+    .card_padding{
+        padding-left: 2.2rem;
+        padding-right: 2.2rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .card_padding{
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    .card_body{
+        width: 330px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .card_title {
+        font-size: 2.8rem;
+        line-height: 2.8rem;
+    }
+
+    .third_card{
+        padding-top: 3.50rem;
+    }
+
+    .card_portion {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+
+    .card_padding{
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    .card_body{
+        width: 280px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .card_title {
+        font-size: 2rem;
+        line-height: 2.8rem;
+    }
+
+    .third_card{
+        padding-top: 2.20rem;
+    }
+
+    .card_portion {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+
+    .card_padding{
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    .card_body{
+        width: 100%;
+    }
+
+    .third_card_padding{
+        padding-top: 3rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .card_title {
+        font-size: 1.5rem;
+        line-height: 2.8rem;
+    }
+
+    .third_card{
+        padding-top: 2.20rem;
+    }
+
+    .card_portion {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
+
+    .card_padding{
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    .card_body{
+        width: 100%;
+    }
+
+    .third_card_padding{
+        padding-top: 3rem;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 576px) {
+    .card_title {
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+    }
+
+    .third_card{
+        padding-top: 1rem;
+    }
+
+    .card_portion {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .card_padding{
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
+
+    .card_body{
+        width: 100%;
+    }
+
+    .third_card_padding{
+        padding-top: 2rem;
+    }
 }
